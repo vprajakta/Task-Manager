@@ -1,8 +1,14 @@
 import React from 'react'
 import Sidebar from '../components/Home/Sidebar'
 import { Outlet } from 'react-router-dom'
-
+import { useEffect ,useState} from 'react'
+import axios from 'axios';
 const Home = () => {
+  
+  useEffect(async()=>{
+     axios.get("https://jsonplaceholder.typicode.com/todos")
+     .then((response)=>{})
+  },[])
   return (
     <div className='flex h-[98vh] gap-4'>
             <div className=' w-1/6 border border-purple-300 rounded-xl p-4 flex flex-col justify-between'>
